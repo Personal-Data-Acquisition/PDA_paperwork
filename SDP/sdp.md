@@ -7,16 +7,25 @@
 
 # Principles
 
-
 # Process
+
+## Goals & Objectives
+
+## Project Scope
 
 
 # Roles
 
-* **UI:** 
-* **SBC/SW:** 
-* **Firmware:** Patrick
-* **Hardware:** Jake Goodwin
+| ROLE         | PERSON       | REPONSABILITIES                                |
+| ------------ | ------------ | ----------------------------------             |
+| UI           | Blake        |                                                |
+| SBC/SW       | Aidian       |                                                |
+| FIRMWARE     | Patrick      |                                                |
+| HARDWARE     | Jake         | design schematics, wiring diagrams & PCB files |
+
+These are the general outlines for the four diffent roles in the project. We 
+have a verbal agreement at the moment that we will help out with parts of the
+project outside our roles as needed.
 
 # Tooling
 
