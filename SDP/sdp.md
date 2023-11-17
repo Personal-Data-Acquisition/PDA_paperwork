@@ -13,7 +13,14 @@
 
 # Roles
 
+* **UI:** 
+* **SBC/SW:** 
+* **Firmware:** Patrick
+* **Hardware:** Jake Goodwin
+
 # Tooling
+
+
 
 # Definition of Done(DOD)
 
