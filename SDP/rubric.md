@@ -35,10 +35,10 @@ Organization
 
 ## Word Choice / Conventions / Sentence Fluency
 
-    Is the language clear and concise, avoiding ambiguity or jargon?
-    The document is relatively free of common errors in grammar and punctuation
+    - Is the language clear and concise, avoiding ambiguity or jargon?
+    - The document is relatively free of common errors in grammar and punctuation
 
 ## Presentation
 
-    Is the document presented professionally with proper formatting, fonts, and visuals (if applicable)?
+    - Is the document presented professionally with proper formatting, fonts, and visuals (if applicable)?
 
