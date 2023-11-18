@@ -17,6 +17,11 @@
 
 ## Project Scope
 
+- Design of simple UI to display data.
+- Design of hardware/schematics for system.
+- Firmware for sensor modules in rust.
+- SBC with rust software to store/log sensor data over CAN.
+
 
 # Roles
 
@@ -57,6 +62,18 @@ will make tracking milestones and issues  for the entire project across
 multiple repositories a possibility.
 
 ## Documentation
+
+Documentation will primaily be done through the built-in rust-docs feature. 
+This is accesiable via the CLI(command line interface) tooling. This will 
+encapsulate how the code itself and any interfaces are documented.
+
+Because the documentation is genreated as part of the code this will ensure 
+that up to date and accurate documentatio is always availble.
+
+Secondary documentation meant for non-developers will be done using a combination
+of markdown and LaTex where needed. This will be availble usally in a PDF format.
+
+
 
 ## Test Frameworks
 
