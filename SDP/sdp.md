@@ -77,9 +77,36 @@ well.
 
 ## TESTING
 
+**Rust:**
+
+The testing for all code repositories will be done using a testing harness
+or framework. For rust this takes the form of the `cargo test` command, which
+is part of the package managment system(tool-chain).
+
+These tests will be used as one of acceptance critera for a branch to be pulled
+into the main branch.
+
+**C:**
+
+Some libraries or areas where the use of C code is needed we plan to use 
+cmocka as the unit testing framework. This combined with Cmake as the build 
+system will give us a host agnostic development cycle.
+
+
 ### Quality Assurance
 
+Quality assurance will mostly be handled by adhearance to style standards
+enforced by the lanuages LSP(language server protocol) servers. The two that
+will see extensive use in this project being:
+
+1. Rust-analyzer
+2. clangd
+
 ### Feedback
+
+Feedback on the work done will take place in the github projects. The issues
+and discussion boards are the main locations for this, with the weekly meetings
+and discord being a secondary and informal medium for minor feedback.
 
 
 # Release Cycle
