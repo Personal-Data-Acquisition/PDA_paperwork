@@ -9,9 +9,22 @@
 
 # Process
 
+1. write failing tests.
+2. write code to pass tests.
+3. repeat.
+
 ## Steps in software development
 
-1. 
+1. Create a github issue/milestone.
+2. Assign github task/issue.
+3. Create fork of repo.
+4. Write tests using the test framework.
+5. Push the tests to the fork (optional).
+6. Write Code to pass the tests.
+7. Test the code.
+8. Push to the fork repo.
+9. Create a pull request with description.
+10. Get approval for the PR(pull request).
 
 ## Goals & Objectives
 
@@ -87,6 +100,19 @@ physical hardware of the system; providing a good troubleshooting resource as
 well.
 
 ## Communication
+
+**Discord:**
+* Used to coordinate team meetings.
+* To share ideas/brainstorm
+* give updates on project.
+
+**Teams:**
+* TA meetings.
+
+
+**GITHUB:**
+* To discuss project issues.
+* share documentation.
 
 
 
