@@ -160,6 +160,15 @@ with any major changes that break APIs.
 
 ## Contingency Plans
 
+Feedback can be shared during weekly standup with the TA, or over Discord if they 
+are more time-sensitive, after which it should be reviewed by the whole team, and 
+then incorporated. Changes to the whole process will require more comprehensive 
+feedback and approval from the team before going into effect, after which related 
+documents should be modified as soon as possible.
+
+In the event of unexpected challenges, the team should be notified immediately, 
+and if serious enough should be brought up with the TA, project partner or 
+instructor, otherwise they should be brought up during regular meetings.
 
 # Timeline
 
