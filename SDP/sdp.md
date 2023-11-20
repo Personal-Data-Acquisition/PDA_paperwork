@@ -1,6 +1,6 @@
 # Software Development Process(SDP)
 
-**Authors:** Jake Goodwin, Aidan Agee, Blake Babb,
+**Authors:** Jake Goodwin, Aidan Agee, Blake Babb, Patrick Iacob
 
 **DATE:** 2023-11-16
 
