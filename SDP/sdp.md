@@ -63,7 +63,7 @@ want, and is cheap and easy to set up and use.
 | ------------ | ------------ | ----------------------------------             |
 | UI           | Blake        | Develops the web page front end                |
 | SBC/SW       | Aidian       | Develop logic to relay sensor data to UI       |
-| FIRMWARE     | Patrick      |                                                |
+| FIRMWARE     | Patrick      | Develop firmware for microcontrollers          |
 | HARDWARE     | Jake         | Design schematics, wiring diagrams & PCB files |
 
 These are the general outlines for the four different roles in the project. We 
@@ -199,3 +199,8 @@ instructor, otherwise they should be brought up during regular meetings.
 * 03/22/2023: Version 1 complete with functionality between firmware, SBC, and UI
 
 # Environments
+| Environment              | Infrastructure                                   | Deployment                                         | What is it for?                                      | Monitoring           |
+|--------------------------|--------------------------------------------------|----------------------------------------------------|------------------------------------------------------|-----------------------|
+| Production               | Github releases                                  | Release                                            | Packaging install files.                              | N/A                   |
+| Staging                  | Github actions                                   |                                                    |                                                      | Github Pull requests  |
+| Development              | Local                                            | Github commits                                     | Development and unit tests of microcontroller-based sensors | Manual                |
