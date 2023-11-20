@@ -37,6 +37,12 @@
 
 ## Goals & Objectives
 
+Develop a personal data acquisition system that records all the data a user might 
+want, and is cheap and easy to set up and use.
+* Record data on acceleration, force, position, etc.
+* Minimal setup
+* Can be hooked up to bike, go-kart, etc.
+
 ## Project Scope
 
 - Design of simple UI to display data.
