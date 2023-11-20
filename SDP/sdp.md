@@ -7,6 +7,15 @@
 
 # Principles
 
+* We will respond to asynchronous communication within 24 hours
+* We will be at meetings on time and pay attention
+* All changes need to be isolated to their own git branch
+* Each work item need a corresponding GitHub issue
+* Pull Requests have to be reviewed by at least one team member
+* We will use a kanban board to continuously work on the backlog
+* Once a work item is complete, a pull request is created
+* Blocks need to be discussed as soon as possible
+
 # Process
 
 1. write failing tests.
