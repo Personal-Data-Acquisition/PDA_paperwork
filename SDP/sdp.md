@@ -18,9 +18,15 @@
 
 # Process
 
-1. write failing tests.
-2. write code to pass tests.
-3. repeat.
+Task Selection:
+* Kanban style
+* Select highest priority item within your role's domain
+
+To Solve an Issue and Meet Acceptance Criteria:
+1. Write failing tests.
+2. Write code to pass tests.
+3. Repeat.
+4. Open a pull-request and merge
 
 ## Steps in software development
 
@@ -53,12 +59,12 @@ want, and is cheap and easy to set up and use.
 
 # Roles
 
-| ROLE         | PERSON       | RESPONSIBILITIES                                |
+| ROLE         | PERSON       | RESPONSIBILITIES                               |
 | ------------ | ------------ | ----------------------------------             |
 | UI           | Blake        |                                                |
-| SBC/SW       | Aidian       |                                                |
+| SBC/SW       | Aidian       | Develop logic to relay sensor data to UI       |
 | FIRMWARE     | Patrick      |                                                |
-| HARDWARE     | Jake         | design schematics, wiring diagrams & PCB files |
+| HARDWARE     | Jake         | Design schematics, wiring diagrams & PCB files |
 
 These are the general outlines for the four different roles in the project. We 
 have a verbal agreement at the moment that we will help out with parts of the
@@ -101,10 +107,6 @@ that up to date and accurate documentatio is always availble.
 Secondary documentation meant for non-developers will be done using a combination
 of markdown and LaTex where needed. This will be availble usally in a PDF format.
 
-
-
-## Test Frameworks
-
 ## Schematics & PCB
 
 The KiCAD program gives access to the schematics and PCB designs to all team 
@@ -129,9 +131,15 @@ well.
 * To discuss project issues.
 * share documentation.
 
-
-
 # Definition of Done(DOD)
+
+* Acceptance criteria all satisfied by code changes
+* Changes have been merged to master after completing the Pull Request Process
+* A completed Pull Request has at least one approval and no marks for “Needs Work”
+* All tests pass with changes implemented and no reversion is required
+* Relevant documentation for the feature has been updated
+* Discussion points are prepared for next meeting
+
 
 ## TESTING
 
@@ -187,6 +195,7 @@ instructor, otherwise they should be brought up during regular meetings.
 
 # Timeline
 
-
+* 12/15/2023: Version 0 complete with breadboard organized hardware and visual UI elements
+* 03/22/2023: Version 1 complete with functionality between firmware, SBC, and UI
 
 # Environments
