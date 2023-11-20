@@ -61,7 +61,7 @@ want, and is cheap and easy to set up and use.
 
 | ROLE         | PERSON       | RESPONSIBILITIES                               |
 | ------------ | ------------ | ----------------------------------             |
-| UI           | Blake        |                                                |
+| UI           | Blake        | Develops the web page front end                |
 | SBC/SW       | Aidian       | Develop logic to relay sensor data to UI       |
 | FIRMWARE     | Patrick      |                                                |
 | HARDWARE     | Jake         | Design schematics, wiring diagrams & PCB files |
