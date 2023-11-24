@@ -23,15 +23,19 @@ require minimal setup, and can be hooked up to bike, go-kart, etc.
 
 ## Stakeholders
 
-**Capstone Team**
-The capstone team are the main decision makers for the project, and will need extensive information for the product’s requirements and implementation details. They will also need oversight from the project partner and TA.
-**Project Partner**
-The project partner will be working very closely with the capstone team, and will need to know the teams capabilities and status, and the status of the project.
-**Project TA**
-The TA needs to be informed on project progress and any issues the team may be having.
-Capstone Instructors
-The instructors require much of the same information as the TA, but because they are working less closely with the team there is less urgency.
-**Users**
+**Capstone Team**   
+The capstone team are the main decision makers for the project, and will need extensive information for the product’s requirements and implementation details. They will also need oversight from the project partner and TA.  
+
+**Project Partner**  
+The project partner will be working very closely with the capstone team, and will need to know the teams capabilities and status, and the status of the project. 
+
+**Project TA**    
+The TA needs to be informed on project progress and any issues the team may be having.  
+
+**Capstone Instructors**  
+The instructors require much of the same information as the TA, but because they are working less closely with the team there is less urgency. 
+
+**Users**  
 Users will need to know the product’s capabilities, limitations and intended use.
 
 ## Preliminary Context
