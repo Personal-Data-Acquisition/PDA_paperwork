@@ -13,7 +13,11 @@ Existing personal data acquisition devices are either too expensive or too DIY f
 ### Use Cases
 
 The user will take the product along with them on an outdoor activity and subject it to normal conditions for that activity.
+
 The user will connect the product to a phone or laptop they brought with them, and view the data stream and take samples using the user interface, and save the data locally.
+
+The user will choose and connect selected modules to the system using the
+CAN(controller area network) bus.
 
 ## Purpose and Vision(Background)
 
@@ -41,6 +45,13 @@ Users will need to know the product’s capabilities, limitations and intended u
 ## Preliminary Context
 
 ### Assumptions
+
+* We have a suitable power supply of 12v to power the system.
+* The end user has a device capable of connecting to an ad-hoc network.
+* The data to be logged doesn't require more speed than the CAN 2.0 standard.
+* The enviroment it's meant to be used in is electrically noisy.
+
+
 
 ### Constraints
 
