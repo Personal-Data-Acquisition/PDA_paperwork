@@ -117,7 +117,8 @@ There are guides on the internet that instruct a user on how to build their own 
 | PCB        | PCB gerber files       | 1 month  |
 | uC         | Firmware for STM       |          |
 | Sensor FW  | Sensor module firmware |          |
-|            |                        |          |
+| UI         | Web user interface     |          |
+| Server     | The backend webserer   |          |
 
 
 ## goals and success metrics
