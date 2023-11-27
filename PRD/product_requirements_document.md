@@ -60,7 +60,19 @@ Users will need to know the product’s capabilities, limitations and intended u
 * We are limited to three terms to deliver our product.
 
 
+
 ### Dependencies
+
+* The rust language
+* C compiler(s)
+* Rust Embessy Library.
+* Rust Rocket(web server)
+* STM SDK and HAL
+* The CAN standard.
+* The Unix networking stack
+* SQLite and or rust file I/O
+* Rust Libraries availble for individual sensor modules.
+* 
 
 ## Market Assessment and Competition Analysis
 
@@ -90,10 +102,24 @@ There are guides on the internet that instruct a user on how to build their own 
 
 ### integration requirements
 
+* All interfaces will be rust doc documented.
+* Tests will ensure API usage integrity.
+* All modules that are to use the interface must pass integration tests.
+
+
 ### user interaction adn design
 
 
 ## milestones and timeline
+
+| Item       | Description            | Duration |
+| Schematics | The wiring schematics  | 2 months |
+| PCB        | PCB gerber files       | 1 month  |
+| uC         | Firmware for STM       |          |
+| Sensor FW  | Sensor module firmware |          |
+| UI         | Web user interface     |          |
+| Server     | The backend webserer   |          |
+
 
 ## goals and success metrics
 
