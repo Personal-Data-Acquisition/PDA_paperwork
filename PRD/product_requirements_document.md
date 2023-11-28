@@ -10,6 +10,8 @@ Existing personal data acquisition devices are either too expensive or too DIY f
 
 ### Scope
 
+The scope of this project is to develop a prototype for a personal data acquisition device. This prototype will have the ability to collect real time data from a variety of sensors, including accelerometers, gyroscopes, GPS modules, and thermometers. These components will need to combined in a printed circuit board for the final prototype. The scope of this project also includes development of a web-based UI that both presents the data gathered by the prototype and sends commands to the physical device to record data and configure sensors. 
+
 ### Use Cases
 
 The user will take the product along with them on an outdoor activity and subject it to normal conditions for that activity.
@@ -85,6 +87,8 @@ An Apple Watch can track a user’s activity data, and send it to an iPhone with
 There are guides on the internet that instruct a user on how to build their own data acquisition device using Arduino or Raspberry Pi microcontrollers much more inexpensively than the other alternatives. However, this requires the user to have background knowledge in circuitry and programming, and requires a lot of time and effort to set up.
 
 ## Target Demographics(user persona)
+
+Terry is an amateur GoKart enthusiast who was brought into the hobby 8 months ago by friends and has become entrenched in the hobby since then. They are looking for a way to improve their performance but need more information about their current racing habits to do that. 
 
 ## Requirements
 
