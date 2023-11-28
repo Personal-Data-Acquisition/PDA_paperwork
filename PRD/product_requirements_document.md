@@ -163,6 +163,30 @@ James is a competition mountain biker who wants to record and analyze data durin
 *UI Mockup from project partner*
 
 
+### User Documentation
+
+The user documentation will be produced in markdown or LaTeX into a PDF or
+webpage. This documentation will cover the basic usage of the system and
+instructions on how to build it.
+
+### Testing and Quality Assurance
+
+Testing will be done through TDD(test driven development) using the supported
+testing frameworks for rust and C. These tests will allow us as developers to
+ensure the assumptions we make about our code matches the actual behavior of
+it.
+
+Quality assurance will mostly be handled by adhearance to style standards
+enforced by the lanuages LSP(language server protocol) servers. The two that
+will see extensive use in this project being:
+
+1. Rust-analyzer
+2. clangd
+
+Bug and issue tracking will all be handled by GitHub's Issue and project
+system. This also serves as a way to allow public contributions in the future
+to the code base.
+
 ## Milestones and Timeline
 
 | Item       | Description            | Duration |
@@ -173,6 +197,7 @@ James is a competition mountain biker who wants to record and analyze data durin
 | Sensor FW  | Sensor module firmware  |          |
 | UI         | Web user interface      |          |
 | Server     | The back end web server |          |
+
 
 ## Open questions
 Currently, there are no open questions in the project.
