@@ -51,7 +51,7 @@ Users will need to know the product’s capabilities, limitations and intended u
 * We have a suitable power supply of 12v to power the system.
 * The end user has a device capable of connecting to an ad-hoc network.
 * The data to be logged doesn't require more speed than the CAN 2.0 standard.
-* The enviroment it's meant to be used in is electrically noisy.
+* The environment it's meant to be used in is electrically noisy.
 
 
 
@@ -67,16 +67,24 @@ Users will need to know the product’s capabilities, limitations and intended u
 
 * The rust language
 * C compiler(s)
-* Rust Embessy Library.
+* Rust Embassy Library.
 * Rust Rocket(web server)
 * STM SDK and HAL
 * The CAN standard.
 * The Unix networking stack
 * SQLite and or rust file I/O
-* Rust Libraries availble for individual sensor modules.
-* 
+* Rust Libraries available for individual sensor modules.
 
 ## Market Assessment and Competition Analysis
+
+**RexGen:**
+Proprietary CAN bus based data logger, hard to find tutorial or documentation
+and is prohibitively expensive for hobbyists. Also unable to guarantee that their system is
+memory safe.
+
+**CANedge1:**
+CANedge1: It has open source elements to it and documentation that is accessible, but
+still does not meet the requirements for its cost.
 
 DEWEsoft sells test and measurement equipment. Their products are not a good fit for our users because they are designed for industry, and therefore overkill and are prohibitively expensive for an individual.
 
@@ -84,11 +92,13 @@ Omega Engineering sells data loggers that can record the data our users would wa
 
 An Apple Watch can track a user’s activity data, and send it to an iPhone with an easy to read interface. However, the Apple Watch is limited in what kind of data it can record, and would not be appropriate for our users due to its many other unneeded functions.
 
-There are guides on the internet that instruct a user on how to build their own data acquisition device using Arduino or Raspberry Pi microcontrollers much more inexpensively than the other alternatives. However, this requires the user to have background knowledge in circuitry and programming, and requires a lot of time and effort to set up.
+There are guides on the internet that instruct a user on how to build their own data acquisition device using Arduino or Raspberry Pi microcontroller much more inexpensively than the other alternatives. However, this requires the user to have background knowledge in circuitry and programming, and requires a lot of time and effort to set up.
+
+
 
 ## Target Demographics(user persona)
 
-Terry is an amateur GoKart enthusiast who was brought into the hobby 8 months ago by friends and has become entrenched in the hobby since then. They are looking for a way to improve their performance but need more information about their current racing habits to do that. 
+Terry is an amateur Go-kart enthusiast who was brought into the hobby 8 months ago by friends and has become entrenched in the hobby since then. They are looking for a way to improve their performance but need more information about their current racing habits to do that. 
 
 ## Requirements
 
@@ -104,6 +114,10 @@ Terry is an amateur GoKart enthusiast who was brought into the hobby 8 months ag
 
 ### data requirements
 
+* Analog data will be converted to digital.
+* Sensor data must be reliable, resistant to EMI
+* Sensor modules must adhere to the CAN protocol.
+
 ### integration requirements
 
 * All interfaces will be rust doc documented.
@@ -111,19 +125,19 @@ Terry is an amateur GoKart enthusiast who was brought into the hobby 8 months ag
 * All modules that are to use the interface must pass integration tests.
 
 
-### user interaction adn design
+### user interaction and design
 
 
 ## milestones and timeline
 
 | Item       | Description            | Duration |
 -|-|-
-| Schematics | The wiring schematics  | 2 months |
-| PCB        | PCB gerber files       | 1 month  |
-| uC         | Firmware for STM       |          |
-| Sensor FW  | Sensor module firmware |          |
-| UI         | Web user interface     |          |
-| Server     | The backend webserer   |          |
+| Schematics | The wiring schematics   | 2 months |
+| PCB        | PCB gerber files        | 1 month  |
+| uC         | Firmware for STM        |          |
+| Sensor FW  | Sensor module firmware  |          |
+| UI         | Web user interface      |          |
+| Server     | The back end web server |          |
 
 
 ## goals and success metrics
@@ -131,3 +145,8 @@ Terry is an amateur GoKart enthusiast who was brought into the hobby 8 months ag
 ## open questions
 
 ## out of scope
+
+* Support for more than the listed sensors.
+* HAL development
+* Marketing
+
