@@ -100,6 +100,17 @@ There are guides on the internet that instruct a user on how to build their own 
 
 Terry is an amateur Go-kart enthusiast who was brought into the hobby 8 months ago by friends and has become entrenched in the hobby since then. They are looking for a way to improve their performance but need more information about their current racing habits to do that. 
 
+Alice is a CTO of a large company that has decided to data log the forces and location
+their products experience during shipping through multiple contracted pilots and routes.
+She needs a system that isn’t cost prohibitive to deploy in large numbers and can be
+customized for her company's other projects as needed.
+
+John is an extreme snowboarder looking to collect data from his downhill tricks in order
+to help his friend create realistic and smooth animations for a snowboarding video game.
+He needs a data logging system that can endure cold environments and is modular so
+he can keep down the bulk/weight of the system while carving toeside and hitting some
+sweet jumps.
+
 ## Requirements
 
 
@@ -148,5 +159,10 @@ Terry is an amateur Go-kart enthusiast who was brought into the hobby 8 months a
 
 * Support for more than the listed sensors.
 * HAL development
-* Marketing
+* Radiation Hardening
+* Full EMI sheilding
+* Full support for 10 channels saturated with sensor data at 5kHz
+* Water resistance at any depth or submersion
+* Documentation beyond rustdocs/doxygen and markdown/latex.
+* Wireless connectivity beyond ad-hoc wifi.
 
