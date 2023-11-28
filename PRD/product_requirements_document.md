@@ -65,15 +65,22 @@ Users will need to know the product’s capabilities, limitations and intended u
 
 ### Dependencies
 
-* The rust language
-* C compiler(s)
-* Rust Embassy Library.
+* The rust language, (reduces bugs and helps with memory safety.)
+* C compiler(s), (C ABI is still used as a way to interface with libs.)
+* Rust Embassy Library. (Embedded rust lib to reduce boilerplate)
 * Rust Rocket(web server)
-* STM SDK and HAL
+* STM SDK and HAL (Good refences for the actual hardware.)
 * The CAN standard.
 * The Unix networking stack
 * SQLite and or rust file I/O
 * Rust Libraries available for individual sensor modules.
+
+Some possible bottlenecks that could occur given our current dependencies would
+be centered around sensor modules not having an existing library written in
+rust. This would add more development time to the project.
+
+However, we've researched workarounds and discovered tools to generate the
+needed interfaces for rust from a C header file.
 
 ## Market Assessment and Competition Analysis
 
@@ -169,6 +176,7 @@ James is a competition mountain biker who wants to record and analyze data durin
 
 
 ## goals and success metrics
+
 
 ## open questions
 
