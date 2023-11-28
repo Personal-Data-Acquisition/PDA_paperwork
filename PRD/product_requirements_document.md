@@ -111,10 +111,18 @@ He needs a data logging system that can endure cold environments and is modular 
 he can keep down the bulk/weight of the system while carving toeside and hitting some
 sweet jumps.
 
+James is a competition mountain biker who wants to record and analyze data during rides for performance improvement. Uses a smartphone and needs an easy-to-use interface. He needs a system to compare data between runs.
+
 ## Requirements
 
 
 ### user stories and features (functional requirements)
+| User Story                                          | Feature                  | Priority  | GitHub Issue | Dependencies       |
+|------------------------------------------------------|--------------------------|------------|--------------|---------------------|
+| As a mountain biker, I want to be able to view my instantaneous speed at any point in my journey. | Gps                      | Must Have  | TBD          | Common firmware.  |
+| As a motorsport hobbyist, I want to be able to record the g-forces I experience while going around tight corners. | Accelerometer.           | Must Have  | TBD          | Common firmware.  |
+| As a winter sports enthusiast, I want to be able to track the turning speed of my snowboard. | Yaw rate sensor.         | Must Have  | TBD          | Common firmware.  |
+
 
 ### non-functional requirements
 
