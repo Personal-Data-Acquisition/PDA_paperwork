@@ -103,7 +103,7 @@ There are guides on the internet that instruct a user on how to build their own 
 
 
 
-## Target Demographics(user persona)
+## Target Demographics (User Persona)
 
 Terry is an amateur Go-kart enthusiast who was brought into the hobby 8 months ago by friends and has become entrenched in the hobby since then. They are looking for a way to improve their performance but need more information about their current racing habits to do that. 
 
@@ -123,7 +123,7 @@ James is a competition mountain biker who wants to record and analyze data durin
 ## Requirements
 
 
-### user stories and features (functional requirements)
+### User Stories and Features (Functional Requirements)
 | User Story                                          | Feature                  | Priority  | GitHub Issue | Dependencies       |
 |------------------------------------------------------|--------------------------|------------|--------------|---------------------|
 | As a mountain biker, I want to be able to view my instantaneous speed at any point in my journey. | Gps                      | Must Have  | TBD          | Common firmware.  |
@@ -131,27 +131,27 @@ James is a competition mountain biker who wants to record and analyze data durin
 | As a winter sports enthusiast, I want to be able to track the turning speed of my snowboard. | Yaw rate sensor.         | Must Have  | TBD          | Common firmware.  |
 
 
-### non-functional requirements
+### Non-Functional Requirements
 
 * Delay on data transmission should be at an acceptable level
 * Code should be well documented, following coding standards and best practices
 * User interface should intuitive and fast to use
 * The product should use security best practices whenever possible
 
-### data requirements
+### Data requirements
 
 * Analog data will be converted to digital.
 * Sensor data must be reliable, resistant to EMI
 * Sensor modules must adhere to the CAN protocol.
 
-### integration requirements
+### Integration requirements
 
 * All interfaces will be rust doc documented.
 * Tests will ensure API usage integrity.
 * All modules that are to use the interface must pass integration tests.
 
 
-### user interaction and design
+### User interaction and design
 
 * Use a web server to interface with the user
 * Can display live data, configure sensors, and download data
@@ -163,7 +163,7 @@ James is a competition mountain biker who wants to record and analyze data durin
 *UI Mockup from project partner*
 
 
-## milestones and timeline
+## Milestones and Timeline
 
 | Item       | Description            | Duration |
 -|-|-
@@ -174,13 +174,10 @@ James is a competition mountain biker who wants to record and analyze data durin
 | UI         | Web user interface      |          |
 | Server     | The back end web server |          |
 
+## Open questions
+Currently, there are no open questions in the project.
 
-## goals and success metrics
-
-
-## open questions
-
-## out of scope
+## Out of scope
 
 * Support for more than the listed sensors.
 * HAL development
