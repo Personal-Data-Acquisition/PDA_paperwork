@@ -146,6 +146,15 @@ James is a competition mountain biker who wants to record and analyze data durin
 
 ### user interaction and design
 
+* Use a web server to interface with the user
+* Can display live data, configure sensors, and download data
+* Build using EGUI and Rust Rocket
+* Should focus on ease of use for less experienced users
+* Should be able to clearly provide all data and provide configurability
+
+![img](https://github.com/Personal-Data-Acquisition/PDA_paperwork/assets/114545996/c9bfb6fa-6805-4da0-a16f-07caaa345572)  
+*UI Mockup from project partner*
+
 
 ## milestones and timeline
 
