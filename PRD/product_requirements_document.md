@@ -117,6 +117,7 @@ Terry is an amateur GoKart enthusiast who was brought into the hobby 8 months ag
 ## milestones and timeline
 
 | Item       | Description            | Duration |
+-|-|-
 | Schematics | The wiring schematics  | 2 months |
 | PCB        | PCB gerber files       | 1 month  |
 | uC         | Firmware for STM       |          |
