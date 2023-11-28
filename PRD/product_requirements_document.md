@@ -61,7 +61,7 @@ Users will need to know the product’s capabilities, limitations and intended u
 * Our budget is limited, so we will have to choose components carefully based on price.
 * We are limited to three terms to deliver our product.
 
-
+With these constraints factored, the biggest concerns for the feasibility of our project are the skills that need to be learned and limited time alloted to do so and complete the project. As an example, the team has primarily non-formal experience in hardware organization but has thus far worked efficiently in that aspect of the project. These risks are mitigated by the expertise and technical support offered by our project partner, and we consequently find the scope of our project realistic.
 
 ### Dependencies
 
