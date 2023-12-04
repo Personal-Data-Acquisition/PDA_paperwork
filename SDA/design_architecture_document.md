@@ -126,7 +126,14 @@ capable of supporting users through the life cycle of the product.
 
 ## Testing Strategy
 
-### Software(SBC side) Testing
+### Software (SBC side) Testing
+
+User testing will be done to ensure users can understand and use the interface
+effectively. These tests should be focused on confirming that functional requirements
+are met.
+
+Integration testing will be done with mock data until microcontrollers and sensors
+are operational. Further tests will be conducted when hardware is more complete.
 
 ### Firmware Testing
 
