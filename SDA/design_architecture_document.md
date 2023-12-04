@@ -33,9 +33,19 @@ Web server: Acts as the intermediary between the user and the physical acquisiti
 User interface: An HTTP webpage that requests data from the web server to present in useful ways to the user.
 
 ## Data Management
+Sensor readings are transmitted over canbus in JSON format.
+Data is stored in a relational database on the Raspberry Pi.
+RESTful API endpoints are provided for CRUD operations on data.
 
 
 ## Interface Definitions
+API endpoints for the web interface include:
+
+GET /data: Returns a list of collected data from personal devices.
+POST /data: Allows the addition of new data.
+PUT /data/{id}: Updates data with a specified ID.
+DELETE /data/{id}: Deletes data with a specified ID.
+
 
 ## Considerations
 
