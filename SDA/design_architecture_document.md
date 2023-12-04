@@ -51,19 +51,19 @@ requiring data to be accessible.
 
 ## Component Descriptions
 
-Sensors: Hardware components that acquire the raw data, such as accelerometers o
+**Sensors:** Hardware components that acquire the raw data, such as accelerometers o
 r GPS devices.
 
-Microcontroller: Small computer that is responsible for coordinating the sensors
+**Microcontroller:** Small computer that is responsible for coordinating the sensors
  and collecting their data to be broadcast to the web server.
 
-Web server: Acts as the intermediary between the user and the physical 
+**Web server:** Acts as the intermediary between the user and the physical 
 acquisition device. Communicates with the board, composed of the 
 microcontroller and its 
 sensors, to collect data which it then relays to the user interface when 
 queried.
 
-User interface: An HTTP webpage that requests data from the web server to 
+**User interface:** An HTTP webpage that requests data from the web server to 
 present in useful ways to the user.
 
 ## Data Management
@@ -146,3 +146,5 @@ needed as part of our documentation.
 ## Glossary
 
 * SBC: Single Board Computer
+* Rust: A modern compiled and memory safe lanuage.
+
