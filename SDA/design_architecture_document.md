@@ -47,6 +47,10 @@ PUT /data/{id}: Updates data with a specified ID.
 DELETE /data/{id}: Deletes data with a specified ID.
 
 
+There will be a user interface to collect data from each sensor and display it to the user. There will be interactions to get event logs from each sensor, and to clear the event logs.
+The user interface will be hosted on a web server, which users will connect to over with their browser over HTTP. 
+The endpoints for the interface main page would just be the address, with `[address]/config` to configure sensors.
+
 ## Considerations
 
 ### Security
