@@ -143,9 +143,13 @@ management will be unnecessary from our use of the rust language. This along wit
 the built in `rust-docs` will allow us to even use our tests as examples where
 needed as part of our documentation.
 
+Integration testing will mostly be handled as mocked interfaces replicating the
+physical hardware that will be required to collect the data. Further tests can 
+added as needed should more sensors be added to the project at a later point in
+time.
 
 ## Glossary
 
 * SBC: Single Board Computer
-* Rust: A modern compiled and memory safe lanuage.
+* Rust: A modern compiled and memory safe language.
 
