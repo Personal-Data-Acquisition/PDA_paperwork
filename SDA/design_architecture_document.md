@@ -39,17 +39,18 @@ RESTful API endpoints are provided for CRUD operations on data.
 
 
 ## Interface Definitions
-API endpoints for the web interface include:
-
-GET /data: Returns a list of collected data from personal devices.
-POST /data: Allows the addition of new data.
-PUT /data/{id}: Updates data with a specified ID.
-DELETE /data/{id}: Deletes data with a specified ID.
-
 
 There will be a user interface to collect data from each sensor and display it to the user. There will be interactions to get event logs from each sensor, and to clear the event logs.
 The user interface will be hosted on a web server, which users will connect to over with their browser over HTTP. 
-The endpoints for the interface main page would just be the address, with `[address]/config` to configure sensors.
+
+API endpoints for the web interface include:
+
+`GET /data`: Returns a list of collected data from personal devices.
+`GET /sensors`: Returns a list of sensor configurations.
+`POST /data`: Allows the addition of new data.
+`PUT /data/{id}`: Updates data with a specified ID.
+`PUT /sensors/{id}`: Configure a sensor with a specific ID.
+`DELETE /data/{id}`: Deletes data with a specified ID.
 
 ## Considerations
 
