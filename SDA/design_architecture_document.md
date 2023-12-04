@@ -14,7 +14,7 @@ Our hardware and software architectures have the primary goal of being synergist
 
 ## System Overview
 
-![SystemOverview.png]
+![image](SystemOverview.png)
 
 ## Architectural Patterns
 
