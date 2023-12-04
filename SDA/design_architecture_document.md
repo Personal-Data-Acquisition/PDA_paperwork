@@ -79,12 +79,12 @@ The user interface will be hosted on a web server, which users will connect to o
 
 API endpoints for the web interface include:
 
-`GET /data`: Returns a list of collected data from personal devices.
-`GET /sensors`: Returns a list of sensor configurations.
-`POST /data`: Allows the addition of new data.
-`PUT /data/{id}`: Updates data with a specified ID.
-`PUT /sensors/{id}`: Configure a sensor with a specific ID.
-`DELETE /data/{id}`: Deletes data with a specified ID.
+* `GET /data`: Returns a list of collected data from personal devices.  
+* `GET /sensors`: Returns a list of sensor configurations.  
+* `POST /data`: Allows the addition of new data.  
+* `PUT /data/{id}`: Updates data with a specified ID.  
+* `PUT /sensors/{id}`: Configure a sensor with a specific ID.  
+* `DELETE /data/{id}`: Deletes data with a specified ID.  
 
 ## Considerations
 
