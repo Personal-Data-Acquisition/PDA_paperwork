@@ -114,7 +114,7 @@ the board and present to the user at will to mitigate this concern.
 
 ### Maintenance and Support
 
-Once the prototype is complete maintenance and development will be inherited by 
+Once the prototype is complete, maintenance and development will be inherited by 
 Patton Dynamics, the company partner for this project. The company has a 
 background in aeronautics, competitive motor racing, and computer assisted 
 physics, all of which are relevant to the project area. Their experience with 
@@ -123,6 +123,7 @@ capable of supporting users through the life cycle of the product.
 
 
 ## Deployment Strategy
+As the ultimate objective for this project is to develop a prototype PCB that hosts a local webserver as a user interface, there is only deployment in a development environment.
 
 ## Testing Strategy
 
@@ -158,5 +159,6 @@ time.
 ## Glossary
 
 * SBC: Single Board Computer
-* Rust: A modern compiled and memory safe language.
+* Rust: A modern compiled and memory safe language
+* PCB: Printed Circuit Board
 
