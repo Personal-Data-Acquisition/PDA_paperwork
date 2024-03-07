@@ -1,3 +1,25 @@
+#set align(center)
+
+#text(24pt, strong([Team 6 (Personal Data Aquisition]))
+
+Aidan Agee
+
+Blake Babb
+
+Jake Goodwin
+
+Patrick Iacob
+
+*Project Partner:* Chris Patton
+
+#set align(left)
+
+#pagebreak()
+
+#outline()
+
+#pagebreak()
+
 = Abstract
 The aim of this senior capstone project is to design and implement a versatile
 data logging system that integrates single board computers (SBCs), STM32
