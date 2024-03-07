@@ -733,5 +733,16 @@ align(center)[#table(
 )]
 )
 
-#import "src/jake_project_presentation.typ"
+// Commented out for now, formatting isn't great
+//= Jake Project Presentation
+//#include"src/jake_project_presentation.typ"
+
+= Jake Retrospective
+#include "src/jake_retrospective.typ"
+
+= Jake Code Review Notes
+#include "src/jake_code_review_notes.typ"
+
+
+
 
