@@ -1,6 +1,15 @@
 = Abstract
-The aim of this senior capstone project is to design and implement a versatile data logging system that integrates single board computers (SBCs), STM32 microcontrollers, and the Rust programming language. The system will be capable of collecting, storing, and processing data from various sensors and input sources, providing a flexible and reliable solution for a wide range of applications.
-The project will involve the development of software for both the SBCs and STM32 microcontrollers, leveraging the unique capabilities of each platform. The Rust programming language will be used for its safety, performance, and ease of use, allowing for efficient and reliable code development.
+The aim of this senior capstone project is to design and implement a versatile
+data logging system that integrates single board computers (SBCs), STM32
+microcontrollers, and the Rust programming language. The system will be capable
+of collecting, storing, and processing data from various sensors and input
+sources, providing a flexible and reliable solution for a wide range of
+applications.  The project will involve the development of software for both
+the SBCs and STM32 microcontrollers, leveraging the unique capabilities of each
+platform. The Rust programming language will be used for its safety,
+performance, and ease of use, allowing for efficient and reliable code
+development.
+
 + Selection and integration of sensors and input devices for data
   collection.
 
@@ -12,10 +21,17 @@ The project will involve the development of software for both the SBCs and STM32
 + Creation of a user interface for system configuration and data
   visualization.
 
-The project will culminate in the deployment and testing of the data logging system in real-world scenarios, demonstrating its effectiveness and reliability. The system will be designed with scalability and modularity in mind, allowing for future expansion and customization.
-Overall, this project aims to provide a comprehensive solution for data logging applications, showcasing the capabilities of modern embedded systems and the Rust programming language in real-world applications.
+The project will culminate in the deployment and testing of the data logging
+system in real-world scenarios, demonstrating its effectiveness and
+reliability. The system will be designed with scalability and modularity in
+mind, allowing for future expansion and customization.  Overall, this project
+aims to provide a comprehensive solution for data logging applications,
+showcasing the capabilities of modern embedded systems and the Rust programming
+language in real-world applications.
+
 = Change Log
 .. okay
+
 = Product Requirements Document
 #strong[Authors:] Jake Goodwin, Aidan Agee, Blake Babb, Patrick Iacob
 
@@ -131,20 +147,59 @@ realistic.
 
 - Rust Libraries available for individual sensor modules.
 
-Some possible bottlenecks that could occur given our current dependencies would be centered around sensor modules not having an existing library written in rust. This would add more development time to the project.
-However, we’ve researched workarounds and discovered tools to generate the needed interfaces for rust from a C header file.
+Some possible bottlenecks that could occur given our current dependencies would
+be centered around sensor modules not having an existing library written in
+rust. This would add more development time to the project.  However, we’ve
+researched workarounds and discovered tools to generate the needed interfaces
+for rust from a C header file.
+
 == Market Assessment and Competition Analysis
-#strong[RexGen:] Proprietary CAN bus based data logger, hard to find tutorial or documentation and is prohibitively expensive for hobbyists. Also unable to guarantee that their system is memory safe.
-#strong[CANedge1:] CANedge1: It has open source elements to it and documentation that is accessible, but still does not meet the requirements for its cost.
-DEWEsoft sells test and measurement equipment. Their products are not a good fit for our users because they are designed for industry, and therefore overkill and are prohibitively expensive for an individual.
-Omega Engineering sells data loggers that can record the data our users would want, can connect to a remote device over Bluetooth and have easy to use interfaces. However most of their data loggers only record one or two types of data, so a user would need to buy many of them, which would be inconvenient and expensive.
-An Apple Watch can track a user’s activity data, and send it to an iPhone with an easy to read interface. However, the Apple Watch is limited in what kind of data it can record, and would not be appropriate for our users due to its many other unneeded functions.
-There are guides on the internet that instruct a user on how to build their own data acquisition device using Arduino or Raspberry Pi microcontroller much more inexpensively than the other alternatives. However, this requires the user to have background knowledge in circuitry and programming, and requires a lot of time and effort to set up.
+#strong[RexGen:] Proprietary CAN bus based data logger, hard to find tutorial
+or documentation and is prohibitively expensive for hobbyists. Also unable to
+guarantee that their system is memory safe.
+
+#strong[CANedge1:] CANedge1: It has open source elements to it and
+documentation that is accessible, but still does not meet the requirements for
+its cost.  DEWEsoft sells test and measurement equipment. Their products are
+not a good fit for our users because they are designed for industry, and
+therefore overkill and are prohibitively expensive for an individual.  Omega
+Engineering sells data loggers that can record the data our users would want,
+can connect to a remote device over Bluetooth and have easy to use interfaces.
+However most of their data loggers only record one or two types of data, so a
+user would need to buy many of them, which would be inconvenient and expensive.
+An Apple Watch can track a user’s activity data, and send it to an iPhone with
+an easy to read interface. However, the Apple Watch is limited in what kind of
+data it can record, and would not be appropriate for our users due to its many
+other unneeded functions.  There are guides on the internet that instruct a
+user on how to build their own data acquisition device using Arduino or
+Raspberry Pi microcontroller much more inexpensively than the other
+alternatives. However, this requires the user to have background knowledge in
+circuitry and programming, and requires a lot of time and effort to set up.
+
 == Target Demographics (User Persona)
-Terry is an amateur Go-kart enthusiast who was brought into the hobby 8 months ago by friends and has become entrenched in the hobby since then. They are looking for a way to improve their performance but need more information about their current racing habits to do that.
-Alice is a CTO of a large company that has decided to data log the forces and location their products experience during shipping through multiple contracted pilots and routes. She needs a system that isn’t cost prohibitive to deploy in large numbers and can be customized for her company’s other projects as needed.
-John is an extreme snowboarder looking to collect data from his downhill tricks in order to help his friend create realistic and smooth animations for a snowboarding video game. He needs a data logging system that can endure cold environments and is modular so he can keep down the bulk/weight of the system while carving toeside and hitting some sweet jumps.
-James is a competition mountain biker who wants to record and analyze data during rides for performance improvement. Uses a smartphone and needs an easy-to-use interface. He needs a system to compare data between runs.
+Terry is an amateur Go-kart enthusiast who was brought into the hobby 8 months
+ago by friends and has become entrenched in the hobby since then. They are
+looking for a way to improve their performance but need more information about
+their current racing habits to do that.  Alice is a CTO of a large company that
+has decided to data log the forces and location their products experience
+during shipping through multiple contracted pilots and routes. She needs a
+system that isn’t cost prohibitive to deploy in large numbers and can be
+customized for her company’s other projects as needed.  John is an extreme
+snowboarder looking to collect data from his downhill tricks in order to help
+his friend create realistic and smooth animations for a snowboarding video
+game. He needs a data logging system that can endure cold environments and is
+modular so he can keep down the bulk/weight of the system while carving toeside
+and hitting some sweet jumps.  James is a competition mountain biker who wants
+to record and analyze data during rides for performance improvement. Uses a
+smartphone and needs an easy-to-use interface. He needs a system to compare
+data between runs.
+
 == Requirements
+
+
+
+
 = Software Design Architecture
+
+
 = Software Design Process
