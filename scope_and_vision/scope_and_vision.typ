@@ -275,7 +275,7 @@ align(center)[#table(
 - Should focus on ease of use for less experienced users
 - Should be able to clearly provide all data and provide configurability
 
-#box(width: 300.0pt, image("/imgs/mockup.jpg"))
+#box(width: 300.0pt, image("mockup.jpg"))
 \
 #emph[UI Mockup from project partner]
 
@@ -732,3 +732,6 @@ align(center)[#table(
   [Manual],
 )]
 )
+
+#import "src/jake_project_presentation.typ"
+
