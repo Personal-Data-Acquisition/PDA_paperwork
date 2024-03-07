@@ -733,9 +733,8 @@ align(center)[#table(
 )]
 )
 
-// Commented out for now, formatting isn't great
-//= Jake Project Presentation
-//#include"src/jake_project_presentation.typ"
+= Jake Project Presentation
+#include"src/jake_project_presentation.typ"
 
 = Jake Retrospective
 #include "src/jake_retrospective.typ"
