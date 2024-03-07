@@ -52,7 +52,12 @@ showcasing the capabilities of modern embedded systems and the Rust programming
 language in real-world applications.
 
 = Change Log
-.. okay
+
+No changes were made to any of the project requirements since the first term;
+we also haven't expanded the scope of the project as our team has been
+plauged with non-functional, counterfit and cloned chips(micro-controllers, 
+CAN transceivers).
+
 
 = Product Requirements Document
 #strong[Authors:] Jake Goodwin, Aidan Agee, Blake Babb, Patrick Iacob
@@ -727,3 +732,17 @@ align(center)[#table(
   [Manual],
 )]
 )
+
+// Commented out for now, formatting isn't great
+//= Jake Project Presentation
+//#include"src/jake_project_presentation.typ"
+
+= Jake Retrospective
+#include "src/jake_retrospective.typ"
+
+= Jake Code Review Notes
+#include "src/jake_code_review_notes.typ"
+
+
+
+
