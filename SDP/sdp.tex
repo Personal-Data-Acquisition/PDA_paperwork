@@ -1,0 +1,334 @@
+\hypertarget{software-development-processsdp}{%
+\section{Software Development
+Process(SDP)}\label{software-development-processsdp}}
+
+\textbf{Authors:} Jake Goodwin, Aidan Agee, Blake Babb, Patrick Iacob
+
+\textbf{DATE:} 2023-11-16
+
+\hypertarget{principles}{%
+\section{Principles}\label{principles}}
+
+\begin{itemize}
+\tightlist
+\item
+  We will respond to asynchronous communication within 24 hours
+\item
+  We will be at meetings on time and pay attention
+\item
+  All changes need to be isolated to their own git branch
+\item
+  Each work item need a corresponding GitHub issue
+\item
+  Pull Requests have to be reviewed by at least one team member
+\item
+  We will use a kanban board to continuously work on the backlog
+\item
+  Once a work item is complete, a pull request is created
+\item
+  Blocks need to be discussed as soon as possible
+\end{itemize}
+
+\hypertarget{process}{%
+\section{Process}\label{process}}
+
+Task Selection: * Kanban style * Select highest priority item within
+your role's domain
+
+To Solve an Issue and Meet Acceptance Criteria: 1. Write failing tests.
+2. Write code to pass tests. 3. Repeat. 4. Open a pull-request and merge
+
+\hypertarget{steps-in-software-development}{%
+\subsection{Steps in software
+development}\label{steps-in-software-development}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Create a github issue/milestone.
+\item
+  Assign github task/issue.
+\item
+  Create fork of repo.
+\item
+  Write tests using the test framework.
+\item
+  Push the tests to the fork (optional).
+\item
+  Write Code to pass the tests.
+\item
+  Test the code.
+\item
+  Push to the fork repo.
+\item
+  Create a pull request with description.
+\item
+  Get approval for the PR(pull request).
+\end{enumerate}
+
+\hypertarget{goals-objectives}{%
+\subsection{Goals \& Objectives}\label{goals-objectives}}
+
+Develop a personal data acquisition system that records all the data a
+user might want, and is cheap and easy to set up and use. * Record data
+on acceleration, force, position, etc. * Minimal setup * Can be hooked
+up to bike, go-kart, etc.
+
+\hypertarget{project-scope}{%
+\subsection{Project Scope}\label{project-scope}}
+
+\begin{itemize}
+\tightlist
+\item
+  Design of simple UI to display data.
+\item
+  Design of hardware/schematics for system.
+\item
+  Firmware for sensor modules in rust.
+\item
+  SBC with rust software to store/log sensor data over CAN.
+\end{itemize}
+
+\hypertarget{roles}{%
+\section{Roles}\label{roles}}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+ROLE & PERSON & RESPONSIBILITIES\tabularnewline
+\midrule
+\endhead
+UI & Blake & Develops the web page front end\tabularnewline
+SBC/SW & Aidian & Develop logic to relay sensor data to
+UI\tabularnewline
+FIRMWARE & Patrick & Develop firmware for
+microcontrollers\tabularnewline
+HARDWARE & Jake & Design schematics, wiring diagrams \& PCB
+files\tabularnewline
+\bottomrule
+\end{longtable}
+
+These are the general outlines for the four different roles in the
+project. We have a verbal agreement at the moment that we will help out
+with parts of the project outside our roles as needed.
+
+\hypertarget{tooling}{%
+\section{Tooling}\label{tooling}}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Purpose & Name\tabularnewline
+\midrule
+\endhead
+Version Control & Git\tabularnewline
+Project Management & GitHub Projects\tabularnewline
+Documentation & Rustdocs \& MD\tabularnewline
+Test framework & Rust \& Cmocka\tabularnewline
+Editor & ANY\tabularnewline
+Schematics \& PCB & KiCAD\tabularnewline
+Communication & Discord/Teams/Email\tabularnewline
+&\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{version-control}{%
+\subsection{Version Control}\label{version-control}}
+
+Git will allow our team to track changes in the projects files over
+time. Also prevents the loss of work from hardware failures.
+
+\hypertarget{project-management}{%
+\subsection{Project Management}\label{project-management}}
+
+GitHub projects is integrated into github organizations as well as git.
+The project management software makes the collaboration between
+developers easy and will make tracking milestones and issues for the
+entire project across multiple repositories a possibility.
+
+\hypertarget{documentation}{%
+\subsection{Documentation}\label{documentation}}
+
+Documentation will primaily be done through the built-in rust-docs
+feature. This is accesiable via the CLI(command line interface) tooling.
+This will encapsulate how the code itself and any interfaces are
+documented.
+
+Because the documentation is genreated as part of the code this will
+ensure that up to date and accurate documentatio is always availble.
+
+Secondary documentation meant for non-developers will be done using a
+combination of markdown and LaTex where needed. This will be availble
+usally in a PDF format.
+
+\hypertarget{schematics-pcb}{%
+\subsection{Schematics \& PCB}\label{schematics-pcb}}
+
+The KiCAD program gives access to the schematics and PCB designs to all
+team members due to the software begin free and open-source.
+
+It will allow us to comment, label and design the needed circuits for
+the physical hardware of the system; providing a good troubleshooting
+resource as well.
+
+\hypertarget{communication}{%
+\subsection{Communication}\label{communication}}
+
+\textbf{Discord:} * Used to coordinate team meetings. * To share
+ideas/brainstorm * give updates on project.
+
+\textbf{Teams:} * TA meetings.
+
+\textbf{GITHUB:} * To discuss project issues. * share documentation.
+
+\hypertarget{definition-of-donedod}{%
+\section{Definition of Done(DOD)}\label{definition-of-donedod}}
+
+\begin{itemize}
+\tightlist
+\item
+  Acceptance criteria all satisfied by code changes
+\item
+  Changes have been merged to master after completing the Pull Request
+  Process
+\item
+  A completed Pull Request has at least one approval and no marks for
+  ``Needs Work''
+\item
+  All tests pass with changes implemented and no reversion is required
+\item
+  Relevant documentation for the feature has been updated
+\item
+  Discussion points are prepared for next meeting
+\end{itemize}
+
+\hypertarget{testing}{%
+\subsection{TESTING}\label{testing}}
+
+\textbf{Rust:}
+
+The testing for all code repositories will be done using a testing
+harness or framework. For rust this takes the form of the
+\texttt{cargo\ test} command, which is part of the package managment
+system(tool-chain).
+
+These tests will be used as one of acceptance critera for a branch to be
+pulled into the main branch.
+
+\textbf{C:}
+
+Some libraries or areas where the use of C code is needed we plan to use
+cmocka as the unit testing framework. This combined with Cmake as the
+build system will give us a host agnostic development cycle.
+
+\hypertarget{quality-assurance}{%
+\subsubsection{Quality Assurance}\label{quality-assurance}}
+
+Quality assurance will mostly be handled by adhearance to style
+standards enforced by the lanuages LSP(language server protocol)
+servers. The two that will see extensive use in this project being:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Rust-analyzer
+\item
+  clangd
+\end{enumerate}
+
+\hypertarget{feedback}{%
+\subsubsection{Feedback}\label{feedback}}
+
+Feedback on the work done will take place in the github projects. The
+issues and discussion boards are the main locations for this, with the
+weekly meetings and discord being a secondary and informal medium for
+minor feedback.
+
+\hypertarget{release-cycle}{%
+\section{Release Cycle}\label{release-cycle}}
+
+For the moment we will used semantic versioning with the standard
+Major.minor.patch format. This will help when it comes to dealing with
+any major changes that break APIs.
+
+\hypertarget{contingency-plans}{%
+\subsection{Contingency Plans}\label{contingency-plans}}
+
+Feedback can be shared during weekly standup with the TA, or over
+Discord if they are more time-sensitive, after which it should be
+reviewed by the whole team, and then incorporated. Changes to the whole
+process will require more comprehensive feedback and approval from the
+team before going into effect, after which related documents should be
+modified as soon as possible.
+
+In the event of unexpected challenges, the team should be notified
+immediately, and if serious enough should be brought up with the TA,
+project partner or instructor, otherwise they should be brought up
+during regular meetings.
+
+\hypertarget{timeline}{%
+\section{Timeline}\label{timeline}}
+
+\begin{itemize}
+\tightlist
+\item
+  12/15/2023: Version 0 complete with breadboard organized hardware and
+  visual UI elements
+\item
+  03/22/2023: Version 1 complete with functionality between firmware,
+  SBC, and UI
+\end{itemize}
+
+\hypertarget{environments}{%
+\section{Environments}\label{environments}}
+
+\begin{longtable}[]{@{}lllll@{}}
+\toprule
+\begin{minipage}[b]{0.11\columnwidth}\raggedright
+Environment\strut
+\end{minipage} & \begin{minipage}[b]{0.21\columnwidth}\raggedright
+Infrastructure\strut
+\end{minipage} & \begin{minipage}[b]{0.22\columnwidth}\raggedright
+Deployment\strut
+\end{minipage} & \begin{minipage}[b]{0.23\columnwidth}\raggedright
+What is it for?\strut
+\end{minipage} & \begin{minipage}[b]{0.10\columnwidth}\raggedright
+Monitoring\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Production\strut
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedright
+Github releases\strut
+\end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\raggedright
+Release\strut
+\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\raggedright
+Packaging install files.\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+N/A\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Staging\strut
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedright
+Github actions\strut
+\end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+Github Pull requests\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Development\strut
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedright
+Local\strut
+\end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\raggedright
+Github commits\strut
+\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\raggedright
+Development and unit tests of microcontroller-based sensors\strut
+\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\raggedright
+Manual\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
