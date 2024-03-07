@@ -30,7 +30,12 @@ showcasing the capabilities of modern embedded systems and the Rust programming
 language in real-world applications.
 
 = Change Log
-.. okay
+
+No changes were made to any of the project requirements since the first term;
+we also haven't expanded the scope of the project as our team has been
+plauged with non-functional, counterfit and cloned chips(micro-controllers, 
+CAN transceivers).
+
 
 = Product Requirements Document
 #strong[Authors:] Jake Goodwin, Aidan Agee, Blake Babb, Patrick Iacob
@@ -248,7 +253,7 @@ align(center)[#table(
 - Should focus on ease of use for less experienced users
 - Should be able to clearly provide all data and provide configurability
 
-#box(width: 300.0pt, image("mockup.jpg"))
+#box(width: 300.0pt, image("/imgs/mockup.jpg"))
 \
 #emph[UI Mockup from project partner]
 
