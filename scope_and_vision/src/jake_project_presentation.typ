@@ -14,7 +14,6 @@
 ███████╗╚██████╔╝╚██████╔╝╚██████╔╝███████╗██║ ██║ ██╔╝ ╚═╝ ╚═════╝ ╚═╝
 ╚═╝ ╚═╝ ╚═╝ ╚═╝ ╚══════╝ ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝╚═╝ ╚═╝ ╚═╝
 
-#horizontalrule
 
 = -\> Project Overview \<-
 #label("project-overview--")
@@ -32,7 +31,6 @@ Data logger: #emph[system that logs data(sensor information) over time.]
 -  Build it using the Rust language.
 -  Use CAN(controller area network) for communication of data.
 
-#horizontalrule
 
 = -\> \# Project Roles \<-
 #label("project-roles--")
@@ -41,7 +39,6 @@ components. \* Blake: UI & web server development. #strong[Back End:] \*
 Jake(ME): Electronic Schematic Designs, PCB & firmware development. \*
 Patrick: Firmware development, SBC CAN controller designer.
 
-#horizontalrule
 
 = -\> \# Some Terms \<-
 #label("some-terms--")
@@ -60,7 +57,7 @@ Patrick: Firmware development, SBC CAN controller designer.
 -  Traditionally programmed using C and assembly language(cpp has become
   common as well).
 
-#horizontalrule
+
 
 = -\> \# High level Hardware Overview \<-
 #label("high-level-hardware-overview--")
@@ -87,7 +84,7 @@ Micro-Controller │ │ │ │ │ │ │ │ │ │ │ │ │ │ └┬�
 ├───────────────────────┴─────────────────────────┴─────────────────────────┴────────────────────────┘
 │ RAIL │ └────────────────┘
 
-#horizontalrule
+
 
 = -\> \# Sensor Modules Overview \<-
 #label("sensor-modules-overview--")
@@ -107,7 +104,7 @@ Interface) and UART(Universal └───────────────�
 consumption are Asynchronous Receive and Transmit) ▲ often concerns.
 ─────────────────────────────┘
 
-#horizontalrule
+
 
 = -\> \# Sensor data flow \<-
 #label("sensor-data-flow--")
@@ -124,7 +121,7 @@ Data │ │◄─────────────────────�
 │ │ │ │ │ ┌─────────────────────────────┐ │ │ END OF EXAMPLE
 TRANSMISSION │ │ └─────────────────────────────┘
 
-#horizontalrule
+
 
 = -\> \# Project Sensors Overview \<-
 #label("project-sensors-overview--")
@@ -148,7 +145,7 @@ Sensors Overview │
 ├─────────────────────────────►│ MAX6675(Thermocouple K) │
 └────────────┘ └────────────────────────────┘
 
-#horizontalrule
+
 
 = -\> \# Project Code & Repos \<-
 #label("project-code-repos--")
@@ -175,7 +172,7 @@ humidity │sensor\_lib\_aht20 │ sensor. The existing library had issues
 that could lock up └─────────────────┘ into an infinite loop so we
 needed a new one.
 
-#horizontalrule
+
 
 = -\> \# Development \<-
 #label("development--")
@@ -192,7 +189,7 @@ Cross-Compile rust code into hex/bin files for micro-controller. 8.
 Debug and test with Logic-Analyzers and Oscilloscopes. 9. Repeat for
 every new piece of hardware.
 
-#horizontalrule
+
 
 = -\> \# Technical Challenges \<-
 #label("technical-challenges--")
@@ -202,7 +199,7 @@ every new piece of hardware.
 -  Tooling is also different than C.
 -  Building code for components you don’t have.
 
-#horizontalrule
+
 
 = -\> \# Solutions \<-
 #label("solutions--")
@@ -211,7 +208,7 @@ every new piece of hardware.
 -  Using memory safe language(apparently not totally safe)\*
 -  Lots of diagnostic tooling(Logic-Analyzer & Oscilloscopes)
 
-#horizontalrule
+
 
 = -\> \# Live Demo \<-
 #label("live-demo--")
@@ -219,4 +216,4 @@ every new piece of hardware.
 -  Demo of CAN communications.
 -  Walk-through of schematic designs.
 
-#horizontalrule
+
