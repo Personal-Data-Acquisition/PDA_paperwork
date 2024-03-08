@@ -1,18 +1,22 @@
 = -\> \# Code Review \<-
 #label("code-review--")
-#emph[ ████████╗███████╗ █████╗ ███╗ ███╗ ██████╗
-╚══██╔══╝██╔════╝██╔══██╗████╗ ████║ ██╔════╝ ██║ █████╗
-███████║██╔████╔██║ ███████╗ ██║ ██╔══╝ ██╔══██║██║╚██╔╝██║ ██╔═══██╗
-██║ ███████╗██║ ██║██║ ╚═╝ ██║ ╚██████╔╝ ╚═╝ ╚══════╝╚═╝ ╚═╝╚═╝ ╚═╝
-╚═════╝ ] ██╗ ██████╗ █████╗ ████████╗ █████╗ ██╗ ██████╗ ██████╗
-██████╗ ███████╗██████╗ ██╗ ██╔╝ ██╔══██╗██╔══██╗╚══██╔══╝██╔══██╗ ██║
-██╔═══██╗██╔════╝ ██╔════╝ ██╔════╝██╔══██╗ ╚██╗ ██╔╝█████╗█████╗██║
-██║███████║ ██║ ███████║ ██║ ██║ ██║██║ ███╗██║ ███╗█████╗
-██████╔╝█████╗█████╗╚██╗ ╚██╗╚════╝╚════╝██║ ██║██╔══██║ ██║ ██╔══██║
-██║ ██║ ██║██║ ██║██║ ██║██╔══╝ ██╔══██╗╚════╝╚════╝██╔╝ ╚██╗
-██████╔╝██║ ██║ ██║ ██║ ██║
-███████╗╚██████╔╝╚██████╔╝╚██████╔╝███████╗██║ ██║ ██╔╝ ╚═╝ ╚═════╝ ╚═╝
-╚═╝ ╚═╝ ╚═╝ ╚═╝ ╚══════╝ ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝╚═╝ ╚═╝ ╚═╝
+
+#show raw: set text(size: 4pt)
+```
+                                            ████████╗███████╗ █████╗ ███╗   ███╗     ██████╗
+                                            ╚══██╔══╝██╔════╝██╔══██╗████╗ ████║    ██╔════╝
+                                               ██║   █████╗  ███████║██╔████╔██║    ███████╗
+                                               ██║   ██╔══╝  ██╔══██║██║╚██╔╝██║    ██╔═══██╗
+                                               ██║   ███████╗██║  ██║██║ ╚═╝ ██║    ╚██████╔╝
+                                               ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝     ╚═════╝
+
+                      ██╗           ██████╗  █████╗ ████████╗ █████╗     ██╗      ██████╗  ██████╗  ██████╗ ███████╗██████╗            ██╗
+                     ██╔╝           ██╔══██╗██╔══██╗╚══██╔══╝██╔══██╗    ██║     ██╔═══██╗██╔════╝ ██╔════╝ ██╔════╝██╔══██╗           ╚██╗
+                    ██╔╝█████╗█████╗██║  ██║███████║   ██║   ███████║    ██║     ██║   ██║██║  ███╗██║  ███╗█████╗  ██████╔╝█████╗█████╗╚██╗
+                    ╚██╗╚════╝╚════╝██║  ██║██╔══██║   ██║   ██╔══██║    ██║     ██║   ██║██║   ██║██║   ██║██╔══╝  ██╔══██╗╚════╝╚════╝██╔╝
+                     ╚██╗           ██████╔╝██║  ██║   ██║   ██║  ██║    ███████╗╚██████╔╝╚██████╔╝╚██████╔╝███████╗██║  ██║           ██╔╝
+                      ╚═╝           ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝    ╚══════╝ ╚═════╝  ╚═════╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝           ╚═╝
+```
 
 
 = -\> Project Overview \<-
@@ -32,12 +36,14 @@ Data logger: #emph[system that logs data(sensor information) over time.]
 -  Use CAN(controller area network) for communication of data.
 
 
+
 = -\> \# Project Roles \<-
 #label("project-roles--")
 #strong[Front End:] \* Aidan: GPS data presentation & other UI
 components. \* Blake: UI & web server development. #strong[Back End:] \*
 Jake(ME): Electronic Schematic Designs, PCB & firmware development. \*
 Patrick: Firmware development, SBC CAN controller designer.
+
 
 
 = -\> \# Some Terms \<-
@@ -61,133 +67,221 @@ Patrick: Firmware development, SBC CAN controller designer.
 
 = -\> \# High level Hardware Overview \<-
 #label("high-level-hardware-overview--")
-\_ ┌───────────────────────┐ │ Single Board Computer │ │ (Raspberry Pi4)
-│ │ │ │ │ │ │ │ │ └┬─────────────────────┬┘ ├─────────────────────┤ │
-2CH CAN Interface │ │ │ └─┬─────┬─────┬─────┬─┘ │ │ │ │ │CAN0 │ │CAN1 │
-│ │ │ │ └──┬──┘ └──┬──┘ │ │ │ │ │ │ │ │ │ │
-────▲──┬──────────────────────▲──┬─────────┘
-└▲──┬─────────────────────▲──┬────────────── │ │ │ │ │ │ │ │ │ │ │ │ │ │
-│ │ ┌─┴──▼───┬┬───────┐ ┌──┴──▼──┬┬───────┐ ┌──┴──▼──┬┬───────┐
-┌──┴──▼──┬┬───────┐ │ CAN ││DC-\>DC │◄─┐ │ CAN ││DC-\>DC │◄──┐ │ CAN
-││DC-\>DC │◄──┐ │ CAN ││DC-\>DC │◄──┐ │ Module ││ PSU │ │ │ Module ││
-PSU │ │ │ Module ││ PSU │ │ │ Module ││ PSU │ │ ┌┴────────┴┴───────┴┐ │
-┌┴────────┴┴───────┴┐ │ ┌┴────────┴┴───────┴┐ │ ┌┴────────┴┴───────┴┐ │
-│ STM32F103C8 │ │ │ STM32F103C8 │ │ │ STM32F103C8 │ │ │ STM32F103C8 │ │
-│ Micro-Controller │ │ │ Micro-Controller │ │ │ Micro-Controller │ │ │
-Micro-Controller │ │ │ │ │ │ │ │ │ │ │ │ │ │ └┬─────────────────┬┘ │
-└┬─────────────────┬┘ │ └┬─────────────────┬┘ │ └┬─────────────────┬┘ │
-│ SENSOR │ │ │ SENSOR │ │ │ SENSOR │ │ │ SENSOR │ │ │ (SPI/I2C/UART) │ │
-│ (SPI/I2C/UART) │ │ │ (SPI/I2C/UART) │ │ │ (SPI/I2C/UART) │ │
-└─────────────────┘ │ └─────────────────┘ │ └─────────────────┘ │
-└─────────────────┘ │ │ │ │ │ │ │ │ │ ┌────────────────┐ │ │ │ │ │ │ │ │
-│ │ │ DC POWER
-├───────────────────────┴─────────────────────────┴─────────────────────────┴────────────────────────┘
-│ RAIL │ └────────────────┘
+
+#show raw: set text(size: 4pt)
+```
+                                                       ┌───────────────────────┐
+                                                       │ Single Board Computer │
+                                                       │     (Raspberry Pi4)   │
+                                                       │                       │
+                                                       │                       │
+                                                       │                       │
+                                                       │                       │
+                                                       └┬─────────────────────┬┘
+                                                        ├─────────────────────┤
+                                                        │  2CH CAN Interface  │
+                                                        │                     │
+                                                        └─┬─────┬─────┬─────┬─┘
+                                                          │     │     │     │
+                                                          │CAN0 │     │CAN1 │
+                                                          │     │     │     │
+                                                          └──┬──┘     └──┬──┘
+                                                             │           │
+                                                             │           │
+                                                             │           │
+                                                             │           │
+                                                             │           │
+                  ────▲──┬──────────────────────▲──┬─────────┘           └▲──┬─────────────────────▲──┬──────────────
+                      │  │                      │  │                      │  │                     │  │
+                      │  │                      │  │                      │  │                     │  │
+                    ┌─┴──▼───┬┬───────┐      ┌──┴──▼──┬┬───────┐       ┌──┴──▼──┬┬───────┐      ┌──┴──▼──┬┬───────┐
+                    │  CAN   ││DC->DC │◄─┐   │  CAN   ││DC->DC │◄──┐   │  CAN   ││DC->DC │◄──┐  │  CAN   ││DC->DC │◄──┐
+                    │ Module ││ PSU   │  │   │ Module ││ PSU   │   │   │ Module ││ PSU   │   │  │ Module ││ PSU   │   │
+                   ┌┴────────┴┴───────┴┐ │  ┌┴────────┴┴───────┴┐  │  ┌┴────────┴┴───────┴┐  │ ┌┴────────┴┴───────┴┐  │
+                   │    STM32F103C8    │ │  │    STM32F103C8    │  │  │    STM32F103C8    │  │ │    STM32F103C8    │  │
+                   │  Micro-Controller │ │  │  Micro-Controller │  │  │  Micro-Controller │  │ │  Micro-Controller │  │
+                   │                   │ │  │                   │  │  │                   │  │ │                   │  │
+                   └┬─────────────────┬┘ │  └┬─────────────────┬┘  │  └┬─────────────────┬┘  │ └┬─────────────────┬┘  │
+                    │     SENSOR      │  │   │     SENSOR      │   │   │     SENSOR      │   │  │     SENSOR      │   │
+                    │  (SPI/I2C/UART) │  │   │  (SPI/I2C/UART) │   │   │  (SPI/I2C/UART) │   │  │  (SPI/I2C/UART) │   │
+                    └─────────────────┘  │   └─────────────────┘   │   └─────────────────┘   │  └─────────────────┘   │
+                                         │                         │                         │                        │
+                                         │                         │                         │                        │
+┌────────────────┐                       │                         │                         │                        │
+│                │                       │                         │                         │                        │
+│   DC POWER     ├───────────────────────┴─────────────────────────┴─────────────────────────┴────────────────────────┘
+│     RAIL       │
+└────────────────┘
+```
 
 
 
 = -\> \# Sensor Modules Overview \<-
 #label("sensor-modules-overview--")
-\_ SN65HVD230 Mini360 CAN Transceiver, Able to A DC to DC Boost/Buck
-converter. Send and receive data at 1Mbps The module can accept 12v DC
-power Over a pair of wires while │into the 3.3v DC that is required by
-offering protection from │ │the micro controller, can module and
-electrical faults & noise │ ┌────────┬┬───────┐ │the sensors attached to
-it. for reliable data transfer└────────────► │ CAN ││DC-\>DC │
-◄─────────┘ │ Module ││ PSU │ ┌┴────────┴┴───────┴┐ Sensor Interface │
-STM32F103C8 │ │ Micro-Controller │ ◄────────┐ STM32F103C8 Sensors have a
-variety of ways │ │ │ to connect physically to a micro-
-└┬─────────────────┬┘ │ A micro-controller based on the controller. The
-most common ones │ SENSOR │ │ARM cpu architecture built to be are I2C,
-SPI(Serial Peripheral │ (SPI/I2C/UART) │ │used in embedded systems where
-Interface) and UART(Universal └─────────────────┘ size and power
-consumption are Asynchronous Receive and Transmit) ▲ often concerns.
-─────────────────────────────┘
+
+#show raw: set text(size: 4pt)
+```
+                            SN65HVD230                                                                      Mini360
+                         CAN Transceiver, Able to                                                 A DC to DC Boost/Buck converter.
+                      Send and receive data at 1Mbps                                            The module can accept 12v DC power
+                      Over a pair of wires while                                              │into the 3.3v DC that is required by
+                      offering protection from  │                                             │the micro controller, can module and
+                      electrical faults & noise │               ┌────────┬┬───────┐           │the sensors attached to it.
+                      for reliable data transfer└────────────►  │  CAN   ││DC->DC │ ◄─────────┘
+                                                                │ Module ││ PSU   │
+                                                               ┌┴────────┴┴───────┴┐
+                            Sensor Interface                   │    STM32F103C8    │
+                                                               │  Micro-Controller │ ◄────────┐        STM32F103C8
+                    Sensors have a variety of ways             │                   │          │
+                    to connect physically to a micro-          └┬─────────────────┬┘          │ A micro-controller based on the
+                    controller. The most common ones            │     SENSOR      │           │ARM cpu architecture built to be
+                    are I2C, SPI(Serial Peripheral              │  (SPI/I2C/UART) │           │used in embedded systems where
+                    Interface) and UART(Universal               └─────────────────┘            size and power consumption are
+                    Asynchronous Receive and Transmit)                    ▲                     often concerns.
+                                             ─────────────────────────────┘
+```
 
 
 
 = -\> \# Sensor data flow \<-
 #label("sensor-data-flow--")
-\_ ┌───────────────┐ ┌────────────────┐ │ SBC(RPi4) │ │ Senor Module │
-└───────┬───────┘ Sends Request for └────────┬───────┘ │ Sensor Module
-Status │ ├──────────────────────────────────────────────►│ │ │ │ │ │
-Returns Status Data │ │◄──────────────────────────────────────────────┤
-│ │ │ │ │ │ │ Requests Data Formatting │ │ For the available sensor
-data. │ ├──────────────────────────────────────────────►│ │ │ │ Responds
-with formatting │ │◄──────────────────────────────────────────────┤ │ │
-│ │ │ │ │ │ │ Requests Sensor Data │
-├──────────────────────────────────────────────►│ │ │ │ Sends the Sensor
-Data │ │◄──────────────────────────────────────────────┤ │ │ │ │ │ │ │ │
-│ │ │ │ │ ┌─────────────────────────────┐ │ │ END OF EXAMPLE
-TRANSMISSION │ │ └─────────────────────────────┘
+
+#show raw: set text(size: 4pt)
+```
+                                        ┌───────────────┐                              ┌────────────────┐
+                                        │   SBC(RPi4)   │                              │  Senor Module  │
+                                        └───────┬───────┘     Sends Request for        └────────┬───────┘
+                                                │           Sensor Module Status                │
+                                                ├──────────────────────────────────────────────►│
+                                                │                                               │
+                                                │                                               │
+                                                │             Returns Status Data               │
+                                                │◄──────────────────────────────────────────────┤
+                                                │                                               │
+                                                │                                               │
+                                                │                                               │
+                                                │             Requests Data Formatting          │
+                                                │             For the available sensor data.     │
+                                                ├──────────────────────────────────────────────►│
+                                                │                                               │
+                                                │             Responds with formatting          │
+                                                │◄──────────────────────────────────────────────┤
+                                                │                                               │
+                                                │                                               │
+                                                │                                               │
+                                                │                                               │
+                                                │             Requests Sensor Data              │
+                                                ├──────────────────────────────────────────────►│
+                                                │                                               │
+                                                │              Sends the Sensor Data            │
+                                                │◄──────────────────────────────────────────────┤
+                                                │                                               │
+                                                │                                               │
+                                                │                                               │
+                                                │                                               │
+                                                │                                               │
+                                                │                                               │
+                                                │         ┌─────────────────────────────┐       │
+                                                          │ END OF EXAMPLE TRANSMISSION │       │
+                                                          └─────────────────────────────┘
+```
 
 
 
 = -\> \# Project Sensors Overview \<-
 #label("project-sensors-overview--")
-┌────────────────────────────────────────────────────────┐ │ │ │ Current
-Sensors Overview │
-└────────────────────────────────────────────────────────┘
 
-┌────────────┐ I2C Bus ┌────────────────────────┐ │STM32F103C8
-├─────────────────────────────►│ AHT20(temp & humidity) │ └────────────┘
-└────────────────────────┘
+#show raw: set text(size: 4pt)
+```
+  ┌────────────────────────────────────────────────────────┐
+  │                                                        │
+  │                 Current Sensors Overview               │
+  └────────────────────────────────────────────────────────┘
 
-┌────────────┐ I2C Bus ┌────────────────────────────┐ │STM32F103C8
-├─────────────────────────────►│ MPU9250(Accel Gyro compass)│
-└────────────┘ └────────────────────────────┘ \
 
-┌────────────┐ SPI or USART ┌────────────────────────────┐ │STM32F103C8
-├─────────────────────────────►│ GNSS7(GPS Data) │ └────────────┘
-└────────────────────────────┘
+┌────────────┐          I2C Bus             ┌────────────────────────┐
+│STM32F103C8 ├─────────────────────────────►│ AHT20(temp & humidity) │
+└────────────┘                              └────────────────────────┘
+<br>
 
-┌────────────┐ SPI ┌────────────────────────────┐ │STM32F103C8
-├─────────────────────────────►│ MAX6675(Thermocouple K) │
-└────────────┘ └────────────────────────────┘
+┌────────────┐          I2C Bus             ┌────────────────────────────┐
+│STM32F103C8 ├─────────────────────────────►│ MPU9250(Accel Gyro compass)│
+└────────────┘                              └────────────────────────────┘                                                                          
+<br>
+
+┌────────────┐       SPI or USART           ┌────────────────────────────┐
+│STM32F103C8 ├─────────────────────────────►│ GNSS7(GPS Data)            │
+└────────────┘                              └────────────────────────────┘
+<br>
+
+┌────────────┐       SPI                    ┌────────────────────────────┐
+│STM32F103C8 ├─────────────────────────────►│ MAX6675(Thermocouple K)    │
+└────────────┘                              └────────────────────────────┘
+```
 
 
 
 = -\> \# Project Code & Repos \<-
 #label("project-code-repos--")
-\_ ┌────────────────────────────────────────┐ │ │ │ Code Base
-Explanation │ │ │ └────────────────────────────────────────┘
 
-┌──────────────────┐ The pi can server is rust software to handle the
-coms │ Pi4\_can\_server │ between the pi and the sensor modules on the
-can bus. └──────────────────┘ \_ ┌───────────────┐ │ pda\_ui │ The UI
-repo holds the Rust rocket web server and user └───────────────┘
-interface; designed to serve as a webpage application.
+#show raw: set text(size: 4pt)
+```
+                      ┌────────────────────────────────────────┐
+                      │                                        │
+                      │          Code Base Explanation         │
+                      │                                        │
+                      └────────────────────────────────────────┘
 
-┌──────────────────┐ A Repo for the hardware designs and schematics. It
-│ pda\_hardware │ contains the needed electronic schematics and
-component └──────────────────┘ symbols/footprints for PCB manufacturing.
 
-┌─────────────────────┐ Holds multiple branches of firmware for our
-current │ stm32\_sensor\_module │ selection of sensors. It handles the
-data processing └─────────────────────┘ as well as the can bus
-interfacing.
+   ┌──────────────────┐            The pi can server is rust software to handle the coms
+   │  Pi4_can_server  │            between the pi and the sensor modules on the can bus.
+   └──────────────────┘
+    ┌───────────────┐
+    │     pda_ui    │              The UI repo holds the Rust rocket web server and user
+    └───────────────┘              interface; designed to serve as a webpage application.
 
-┌─────────────────┐ A separate sensor library I wrote for the temp &
-humidity │sensor\_lib\_aht20 │ sensor. The existing library had issues
-that could lock up └─────────────────┘ into an infinite loop so we
-needed a new one.
+  ┌──────────────────┐             A Repo for the hardware designs and schematics. It
+  │   pda_hardware   │             contains the needed electronic schematics and component
+  └──────────────────┘             symbols/footprints for PCB manufacturing.
+
+┌─────────────────────┐            Holds multiple branches of firmware for our current
+│ stm32_sensor_module │            selection of sensors. It handles the data processing
+└─────────────────────┘            as well as the can bus interfacing.
+
+┌─────────────────┐              A separate sensor library I wrote for the temp & humidity
+│sensor_lib_aht20 │              sensor. The existing library had issues that could lock up
+└─────────────────┘              into an infinite loop so we needed a new one.
+```
 
 
 
 = -\> \# Development \<-
 #label("development--")
-\_ ┌───────────────────────────────────────────────┐ │ │ │ Firmware
-Development Cycle │ │ │
-└───────────────────────────────────────────────┘
 
-1. Decide on new feature. 2. Setup tests where possible without
-hardware. 3. Write code to pass tests. 4. Repeat until hardware
-required.
+#show raw: set text(size: 4pt)
+```
+         ┌───────────────────────────────────────────────┐
+         │                                               │
+         │          Firmware Development Cycle           │
+         │                                               │
+         └───────────────────────────────────────────────┘
+```
 
-6. Build hardware using breadboarding(manual wiring in test rig) 7.
-Cross-Compile rust code into hex/bin files for micro-controller. 8.
-Debug and test with Logic-Analyzers and Oscilloscopes. 9. Repeat for
-every new piece of hardware.
++  Decide on new feature.
+
++  Setup tests where possible without hardware.
+
++  Write code to pass tests.
+
++  Repeat until hardware required.
+
++  Build hardware using breadboarding(manual wiring in test rig)
+
++  Cross-Compile rust code into hex/bin files for micro-controller.
+
++  Debug and test with Logic-Analyzers and Oscilloscopes.
+
++  Repeat for every new piece of hardware.
 
 
 
