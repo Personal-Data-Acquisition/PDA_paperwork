@@ -1,14 +1,15 @@
 = -\> \# Code Review \<-
 #label("code-review--")
+
+#show raw: set text(size: 4pt)
 ```
-_
                                             ████████╗███████╗ █████╗ ███╗   ███╗     ██████╗
                                             ╚══██╔══╝██╔════╝██╔══██╗████╗ ████║    ██╔════╝
                                                ██║   █████╗  ███████║██╔████╔██║    ███████╗
                                                ██║   ██╔══╝  ██╔══██║██║╚██╔╝██║    ██╔═══██╗
                                                ██║   ███████╗██║  ██║██║ ╚═╝ ██║    ╚██████╔╝
                                                ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝     ╚═════╝
-_
+
                       ██╗           ██████╗  █████╗ ████████╗ █████╗     ██╗      ██████╗  ██████╗  ██████╗ ███████╗██████╗            ██╗
                      ██╔╝           ██╔══██╗██╔══██╗╚══██╔══╝██╔══██╗    ██║     ██╔═══██╗██╔════╝ ██╔════╝ ██╔════╝██╔══██╗           ╚██╗
                     ██╔╝█████╗█████╗██║  ██║███████║   ██║   ███████║    ██║     ██║   ██║██║  ███╗██║  ███╗█████╗  ██████╔╝█████╗█████╗╚██╗
@@ -16,7 +17,6 @@ _
                      ╚██╗           ██████╔╝██║  ██║   ██║   ██║  ██║    ███████╗╚██████╔╝╚██████╔╝╚██████╔╝███████╗██║  ██║           ██╔╝
                       ╚═╝           ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝    ╚══════╝ ╚═════╝  ╚═════╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝           ╚═╝
 ```
-
 
 
 = -\> Project Overview \<-
@@ -67,6 +67,8 @@ Patrick: Firmware development, SBC CAN controller designer.
 
 = -\> \# High level Hardware Overview \<-
 #label("high-level-hardware-overview--")
+
+#show raw: set text(size: 4pt)
 ```
                                                        ┌───────────────────────┐
                                                        │ Single Board Computer │
@@ -116,6 +118,8 @@ Patrick: Firmware development, SBC CAN controller designer.
 
 = -\> \# Sensor Modules Overview \<-
 #label("sensor-modules-overview--")
+
+#show raw: set text(size: 4pt)
 ```
                             SN65HVD230                                                                      Mini360
                          CAN Transceiver, Able to                                                 A DC to DC Boost/Buck converter.
@@ -141,6 +145,8 @@ Patrick: Firmware development, SBC CAN controller designer.
 
 = -\> \# Sensor data flow \<-
 #label("sensor-data-flow--")
+
+#show raw: set text(size: 4pt)
 ```
                                         ┌───────────────┐                              ┌────────────────┐
                                         │   SBC(RPi4)   │                              │  Senor Module  │
@@ -184,6 +190,8 @@ Patrick: Firmware development, SBC CAN controller designer.
 
 = -\> \# Project Sensors Overview \<-
 #label("project-sensors-overview--")
+
+#show raw: set text(size: 4pt)
 ```
   ┌────────────────────────────────────────────────────────┐
   │                                                        │
@@ -215,6 +223,8 @@ Patrick: Firmware development, SBC CAN controller designer.
 
 = -\> \# Project Code & Repos \<-
 #label("project-code-repos--")
+
+#show raw: set text(size: 4pt)
 ```
                       ┌────────────────────────────────────────┐
                       │                                        │
@@ -247,6 +257,8 @@ Patrick: Firmware development, SBC CAN controller designer.
 
 = -\> \# Development \<-
 #label("development--")
+
+#show raw: set text(size: 4pt)
 ```
          ┌───────────────────────────────────────────────┐
          │                                               │
